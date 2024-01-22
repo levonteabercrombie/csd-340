@@ -1,0 +1,54 @@
+/* LastName_Mod3_3.css */
+
+/* Center the h1 title */
+h1 {
+    text-align: center;
+}
+
+/* Set the width of side-by-side divs to 45% */
+div[style*="width: 45%;"] {
+    width: 45%;
+}
+
+/* Set the width of the last div to 100% and give it a margin-top of 60% */
+div[style*="width: 100%; margin-top: 60%;"] {
+    width: 100%;
+    margin-top: 60%;
+}
+
+/* Set the weight of h3 tags to 500 */
+h3 {
+    font-weight: 500;
+}
+
+/* Set the weight of lists to 300 */
+ol, ul {
+    font-weight: 300;
+}
+
+/* Style for ordered list and its title */
+ol {
+    border: 1px solid red !important; /* Added !important to ensure the style is applied */
+    border-radius: 15px;
+    padding: 10px;
+    list-style: inside decimal; /* Keep numbers inside the border */
+}
+
+/* Style for unordered list and its title */
+ul {
+    border: 1px dashed red !important; /* Added !important to ensure the style is applied */
+    border-radius: 15px;
+    padding: 10px;
+    list-style: inside upper-roman; /* Change bullet points to upper-roman and keep inside the border */
+}
+
+/* Hover effect for links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style for the bottom div */
+div[style*="float: right; margin-bottom: 20px;"] {
+    float: right;
+    margin-bottom: 20px;
+}
