@@ -1,0 +1,27 @@
+#container {
+    text-align: center;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10%;
+}
+
+.gallery-item {
+    border: 1px solid red; /* border color to red */
+    padding: 10px; /* Add padding for space around the images */
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+}

@@ -1,6 +1,5 @@
-/* LastName_Mod3_3.css */
 
-/* Center the h1 title */
+
 h1 {
     text-align: center;
 }
@@ -16,33 +15,33 @@ div[style*="width: 100%; margin-top: 60%;"] {
     margin-top: 60%;
 }
 
-/* Set the weight of h3 tags to 500 */
+
 h3 {
     font-weight: 500;
 }
 
-/* Set the weight of lists to 300 */
+
 ol, ul {
     font-weight: 300;
 }
 
 /* Style for ordered list and its title */
 ol {
-    border: 1px solid red !important; /* Added !important to ensure the style is applied */
+    border: 1px solid red !important; 
     border-radius: 15px;
     padding: 10px;
-    list-style: inside decimal; /* Keep numbers inside the border */
+    list-style: inside decimal; 
 }
 
 /* Style for unordered list and its title */
 ul {
-    border: 1px dashed red !important; /* Added !important to ensure the style is applied */
+    border: 1px dashed red !important; 
     border-radius: 15px;
     padding: 10px;
-    list-style: inside upper-roman; /* Change bullet points to upper-roman and keep inside the border */
+    list-style: inside upper-roman; 
 }
 
-/* Hover effect for links */
+
 a:hover {
     text-decoration: underline;
 }
