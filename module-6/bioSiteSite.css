@@ -1,0 +1,25 @@
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1, h2, h3, h4 {
+    background-color: #5f43b2; 
+    color: #FFFFFF; 
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+a {
+    color: #A06D00; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: #A06D00; 
+}
+
+a:visited {
+    color: #A06D00; /* Choose a visited link color that blends with your color scheme */
+}
