@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 20px; 
+        }
+        .image-container img {
+            width: 200px; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <div class="image-container">
+        <img id="caveImage" src="file:///Users/Sirabercrombie/Downloads/Example_10/cave_01.jpg" alt="Cave" onmouseover="changeImage('caveImage')" onmouseout="restoreImage('caveImage')" oncontextmenu="viewSource()">
+        <p>Run your mouse over the image to change.</p>
+    </div>
+    <div class="image-container">
+        <img id="moonImage" src="file:///Users/Sirabercrombie/Downloads/Example_10/moon_01.jpg" alt="Moon" onmouseover="changeImage('moonImage')" onmouseout="restoreImage('moonImage')" oncontextmenu="viewSource()">
+        <p>Run your mouse over the image to change. Right-click and select View Source for more details.</p>
+    </div>
+
+    <script>
+        function changeImage(imageId) {
+            var image = document.getElementById(imageId);
+            
+            if (imageId === "caveImage") {
+                image.src = "file:///Users/Sirabercrombie/Downloads/Example_10/cave_02.jpg";
+            } else if (imageId === "moonImage") {
+                image.src = "file:///Users/Sirabercrombie/Downloads/Example_10/moon_02.jpg";
+            }
+        }
+
+        function restoreImage(imageId) {
+            var image = document.getElementById(imageId);
+            
+            if (imageId === "caveImage") {
+                image.src = "file:///Users/Sirabercrombie/Downloads/Example_10/cave_01.jpg";
+            } else if (imageId === "moonImage") {
+                image.src = "file:///Users/Sirabercrombie/Downloads/Example_10/moon_01.jpg";
+            }
+        }
+
+        function viewSource() {
+           
+            alert("Right-click and select View Page Source for more details.");
+        }
+    </script>
+</body>
+</html>
