@@ -21,12 +21,12 @@
     <h1>Assignment 10.3: JavaScript - Part 2</h1>
 
     <div class="image-container">
-        <img id="caveImage" src="Example_10/cave_01.jpg" alt="Cave" onmouseover="changeImage('caveImage')" onmouseout="restoreImage('caveImage')" oncontextmenu="viewSource()">
-        <p>Run your mouse over the image to change.</p>
+        <img id="caveImage" src="Example_10/cave_01.jpg" alt="Cave" onclick="changeImage('caveImage')" oncontextmenu="viewSource()">
+        <p>Left-click the image to change.</p>
     </div>
     <div class="image-container">
-        <img id="moonImage" src="Example_10/moon_01.jpg" alt="Moon" onmouseover="changeImage('moonImage')" onmouseout="restoreImage('moonImage')" oncontextmenu="viewSource()">
-        <p>Run your mouse over the image to change. Right-click and select View Source for more details.</p>
+        <img id="moonImage" src="Example_10/moon_01.jpg" alt="Moon" onclick="changeImage('moonImage')" oncontextmenu="viewSource()">
+        <p>Left-click the image to change. Right-click and select View Source for more details.</p>
     </div>
 
     <script>
@@ -34,24 +34,22 @@
             var image = document.getElementById(imageId);
             
             if (imageId === "caveImage") {
-                image.src = "Example_10/cave_02.jpg";
+                if (image.src.endsWith("cave_01.jpg")) {
+                    image.src = "Example_10/cave_02.jpg";
+                } else {
+                    image.src = "Example_10/cave_01.jpg";
+                }
             } else if (imageId === "moonImage") {
-                image.src = "Example_10/moon_02.jpg";
-            }
-        }
-
-        function restoreImage(imageId) {
-            var image = document.getElementById(imageId);
-            
-            if (imageId === "caveImage") {
-                image.src = "Example_10/cave_01.jpg";
-            } else if (imageId === "moonImage") {
-                image.src = "Example_10/moon_01.jpg";
+                if (image.src.endsWith("moon_01.jpg")) {
+                    image.src = "Example_10/moon_02.jpg";
+                } else {
+                    image.src = "Example_10/moon_01.jpg";
+                }
             }
         }
 
         function viewSource() {
-           
+            
             alert("Right-click and select View Page Source for more details.");
         }
     </script>
