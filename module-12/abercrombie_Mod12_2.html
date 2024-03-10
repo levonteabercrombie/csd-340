@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="LeVonte Abercrombie">
+    <meta name="description" content="Module 12.2">
+    <meta name="keywords" content="HTML, CSS, CSD 340">
+
+    <link rel="stylesheet" href="abercrombie_Mod3_3.css"> 
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <style>
+        .content-wrapper {
+            border: 2px solid red;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content-wrapper:last-child {
+            margin-bottom: 0;
+        }
+
+        .things-learned {
+            border: 2px dashed red;
+            border-radius: 10px;
+            padding: 10px;
+            float: right;
+            width: 45%;
+            margin-bottom: 20px;
+        }
+
+        .things-learned ul {
+            list-style-type: upper-roman;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <h1 style="text-align: center;">Assignment 12.2: JavaScript - Part 4</h1>
+
+        <div class="content-wrapper" style="width: 45%; float: left;">
+            <h3>Top 10 Favorite Books</h3>
+            <ol id="booksList">
+                <li>The 48 Laws of Power</li>
+                <li>The Way of the Superior Man</li>
+                <li>The New Jim Crow</li>
+                <li>The Creative Act</li>
+                <li>Winning</li>
+                <li>Steve Jobs</li>
+                <li>This is Your Brain on Food</li>
+                <li>Ego is the Enemy</li>
+                <li>The Rose that Grew for Concrete</li>
+                <li>Breaking the Habit of Being Yourself</li>
+            </ol>
+            <div style="margin-top: 20px;">
+                <button onclick="sortAscending()">Top to Bottom</button>
+                <button onclick="sortDescending()">Bottom to Top</button>
+            </div>
+        </div>
+
+        <div class="things-learned" style="width: 45%; float: right;">
+            <h3>5 Things I’ve Learned Since the Course Started</h3>
+            <ul>
+                <li>The Basics of HTML</li>
+                <li>I've learned more about what github can do.</li>
+                <li>I've learned the difference between HTML and CSS.</li>
+                <li>I've learned some of the psychology that goes into creating a webpage and formatting it</li>
+                <li>How to reference links to navigate you to another page.</li>
+            </ul>
+        </div>
+
+        <div style="clear: both;"></div>
+
+        <div style="width: 100%; margin-top: 10%;">
+            <a href="index.html" style="float: right;">Back to Landing Page</a>
+        </div>
+
+    </div>
+
+    <script>
+        function sortAscending() {
+            var booksList = document.getElementById('booksList');
+            var booksArray = Array.from(booksList.getElementsByTagName('li'));
+            booksArray.sort((a, b) => a.innerText.localeCompare(b.innerText));
+            booksArray.forEach(book => booksList.appendChild(book));
+        }
+
+        function sortDescending() {
+            var booksList = document.getElementById('booksList');
+            var booksArray = Array.from(booksList.getElementsByTagName('li'));
+            booksArray.sort((a, b) => b.innerText.localeCompare(a.innerText));
+            booksArray.forEach(book => booksList.appendChild(book));
+        }
+    </script>
+
+</body>
+</html>
